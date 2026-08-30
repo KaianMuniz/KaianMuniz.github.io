@@ -1,0 +1,189 @@
+/* Reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* Variables */
+
+:root {
+    --main-color: #54B689;
+    --main-text-color: #FFF;
+    --border-color: #999;
+    --bio-bg-color: #1E2A3A;
+    --about-bg-color: #111821;
+}
+
+
+/* General */
+
+body {
+    background-color: var(--about-bg-color);
+    color: var(--main-text-color);
+}
+
+.highlight {
+    color: var(--main-color);
+}
+
+
+/* Container */
+
+#projects-container {
+    min-height: 100vh;
+    padding: 50px;
+}
+
+
+/* Header */
+
+#projects-header {
+    max-width: 1000px;
+    margin: 0 auto 50px;
+}
+
+#projects-header h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+#projects-header p {
+    color: #ccc;
+    font-size: 18px;
+}
+
+
+/* Back button */
+
+#back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    width: fit-content;
+
+    margin-bottom: 40px;
+
+    color: var(--main-text-color);
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+#back-button:hover {
+    color: var(--main-color);
+}
+
+
+/* Projects */
+
+#projects-list {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+
+/* Project box */
+
+.project-box {
+    background-color: var(--bio-bg-color);
+    border: 1px solid #293544;
+    border-radius: 8px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: .3s;
+}
+
+.project-box:hover {
+    transform: translateY(-5px);
+}
+
+
+.project-box h2 {
+    margin-bottom: 15px;
+}
+
+.project-box p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+/* Technologies */
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-bottom: 25px;
+}
+
+.technologies span {
+    background-color: var(--about-bg-color);
+
+    border-radius: 4px;
+
+    padding: 6px 10px;
+
+    font-size: 14px;
+}
+
+
+/* Links */
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+}
+
+.project-links a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 10px 15px;
+
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+
+    color: var(--main-text-color);
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.project-links a:hover {
+    background-color: var(--main-color);
+}
+
+
+/* Mobile */
+
+@media(max-width: 700px) {
+
+    #projects-container {
+        padding: 30px;
+    }
+
+    #projects-header h1 {
+        font-size: 32px;
+    }
+
+    #projects-list {
+        grid-template-columns: 1fr;
+    }
+}
