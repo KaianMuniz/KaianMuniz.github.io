@@ -154,6 +154,12 @@
   background-color: transparent;
 }
 
+.tech-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
 #skills-section-title {
   border-top: 1px solid var(--border-color);
   padding-top: 20px;
